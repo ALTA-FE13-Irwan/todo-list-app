@@ -1,2 +1,2 @@
 # todo-list-app
-link vercel : todo-list-app-lime-kappa.vercel.app
+link vercel : https://todo-list-app-lime-kappa.vercel.app/
