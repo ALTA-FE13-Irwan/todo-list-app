@@ -1,12 +1,12 @@
-import axios from "axios";
 import { FC, useEffect, useState, FormEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import axios from "axios";
 
-import Token from "../utils/Token";
 import { DataType, FormSubmit } from "../utils/user";
 import { Layout } from "../components/Layout";
 import { Button } from "../components/Button";
+import Token from "../utils/Token";
 
 const Detail: FC = () => {
   const [data, setData] = useState<Partial<DataType>>({});
@@ -53,7 +53,6 @@ const Detail: FC = () => {
 
   const handleUpdate = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(data.id);
     axios
       .post(`/${data.id}`, objSubmit, Header)
       .then(() => {
@@ -121,8 +120,6 @@ const Detail: FC = () => {
   const backToEdit = () => {
     setIsEdith(false);
   };
-
-  // console.log(inputValue);
 
   const MyData = () => {
     return (

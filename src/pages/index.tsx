@@ -1,12 +1,12 @@
 import { FC, FormEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import Swal from "sweetalert2";
+import axios from "axios";
 
-import Token from "../utils/Token";
 import { DataType, FormSubmit } from "../utils/user";
-import { Card } from "../components/Card";
 import { Layout } from "../components/Layout";
+import { Card } from "../components/Card";
+import Token from "../utils/Token";
 
 const Home: FC = () => {
   const [datas, setDatas] = useState<DataType[]>([]);
